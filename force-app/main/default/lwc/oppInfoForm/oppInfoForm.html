@@ -1,0 +1,49 @@
+<template>
+    <lightning-card  title="New opportunity info">
+        <template if:true={oppData}>
+            <div class="slds-p-around_medium lgc-bg ">
+                <lightning-layout multiple-rows="true" vertical-align="end">
+                    <lightning-layout-item padding="around-small" size="5" small-device-size="6">
+                        <lightning-input class="slds-m-vertical_small" type="text" label="Name" value={oppData.oppName} onchange={newName}></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="5" small-device-size="6">
+                        <lightning-input class="slds-m-vertical_small" type="number" label="Amount" value={oppData.oppAmount} onchange={newAmount}></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+
+            <div class="slds-p-around_medium lgc-bg ">
+                <lightning-layout multiple-rows="true" vertical-align="end">
+                    <lightning-layout-item padding="around-small" size="5" small-device-size="3">    
+                        <div class="error-container">
+                            <template if:true={errorName}>
+                                <p class="slds-text-color_error"> El nombre no ha sido modificado</p>
+                            </template>
+                        </div>
+                    </lightning-layout-item> 
+                    <lightning-layout-item padding="around-small" size="5" small-device-size="3">    
+                        <div class="error-container">
+                            <template if:true={errorAmount}>
+                                <!--//el mensaje aparezca cuando le doy al submit-->
+                                <p class="slds-text-color_error"> La amount no ha sido modificado</p>
+                            </template>
+                        </div>
+                    </lightning-layout-item>     
+                </lightning-layout>
+            </div>
+
+            <div class="slds-p-around_medium slds-text-align_center">
+                <lightning-button variant="brand" label="Submit" title="Submit" onclick={newDataClick}>
+                </lightning-button>
+            </div>
+        
+            
+        </template>
+
+        <template if:true={error}>
+            <div class="slds-p-around_medium slds-theme_error">
+                <p>Error al cargar: {error.body.message}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

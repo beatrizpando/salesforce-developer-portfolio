@@ -1,0 +1,20 @@
+<template>
+    <lightning-card  title="weather data">
+        <template if:true={accData}>
+            <div class="slds-p-around_medium lgc-bg ">
+                <p class="slds-text-heading_small texto-clima-mediano ">El tiempo en:</p>
+                <lightning-input class="slds-m-vertical_small" type="text" label="Region" value={accData.accountDataLwc.BillingCity} onchange={nuevaRegion}></lightning-input>
+                <p class="slds-m-bottom_medium">{accData.mensajeClimaLwc}</p>
+                <div class="boton">
+                <lightning-button variant="brand" label="Actualizar Región" title="Actualizar Región" onclick={nuevaRegionClick}>
+                </lightning-button>
+                </div>
+            </div>
+        </template>
+        <template if:true={error}>
+            <div class="slds-p-around_medium slds-theme_error">
+                <p>Error al cargar: {error.body.message}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template> 

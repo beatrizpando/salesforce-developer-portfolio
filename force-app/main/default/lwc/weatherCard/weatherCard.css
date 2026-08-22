@@ -1,0 +1,16 @@
+.texto-clima-mediano {
+    font-size: var(--slds-g-font-scale-2); 
+    
+    font-weight: var(--slds-g-font-weight-7); 
+
+    
+}
+
+.boton{
+    border-top: var(--slds-g-border-width-1, 1px) solid #cccccc;
+    margin-top: var(--slds-g-spacing-5);
+    padding-top: var(--slds-g-spacing-5);
+    display: flex;
+    justify-content:flex-end;
+}
+
