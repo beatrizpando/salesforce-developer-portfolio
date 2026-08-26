@@ -7,7 +7,7 @@ Ingeniera de Producto reconvertida a Salesforce Developer
 
 
 ## Tecnologías utilizadas
-- Apex (clases, triggers, batches asíncronos, tests)
+- Apex (clases, handler, triggers, tests, batches asíncronos)
 - Lightning Web Components (LWC)
 - Integraciones API REST/SOAP
 - SOQL
