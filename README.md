@@ -1,18 +1,23 @@
-# Salesforce DX Project: Next Steps
+# salesforce-developer-portfolio
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Repositorio para dar a conocer el portfolio de proyectos propios que he desarrollado en mi organización de Salesforce.  
 
-## How Do You Plan to Deploy Your Changes?
+**Beatriz Pando Feijoó** - [LinkedIn](https://linkedin.com/in/beatrizpando) · [Trailblazer](https://trailblazer.me/id/beatrizpando)
+Ingeniera de Producto reconvertida a Salesforce Developer
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-## Configure Your Salesforce DX Project
+## Tecnologías utilizadas
+- Apex (clases, handler, triggers, tests, batches asíncronos)
+- Lightning Web Components (LWC)
+- Integraciones API REST/SOAP
+- SOQL
+- Objetos, flujos y automatizaciones declarativas
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Proyectos incluidos
+ 1 | [Trigger, Handler & Test](force-app/main/default/classes) | Automatización sobre Cuentas y Oportunidades: bloqueo de borrado, tareas automáticas en Closed Won, sincronización de Owner y campo calculado 
+ 
+ 2 | [LWC vs ScreenFlow](force-app/main/default/lwc/weatherCard) | Componente comparativo (LWC vs Flow) con integración a una API meteorológica externa 
+ 
+ 3 | [Batch Schedulable & LWC](force-app/main/default/lwc/oppInfoForm) | Formulario de acción en Oportunidades para la modificación del nombre y la amount de la oportunidad + batch programado con envío de email diario 
 
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+**Nota:** algunas clases, como los handlers y triggers de Cuenta y Oportunidad, se reutilizan entre proyectos. He intentado utilizar el mismo enfoque de organización de código que se usaría en un entorno de trabajo real.
