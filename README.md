@@ -19,5 +19,6 @@ Ingeniera de Producto reconvertida a Salesforce Developer
  2 | [LWC vs ScreenFlow](force-app/main/default/lwc/weatherCard) | Componente comparativo (LWC vs Flow) con integración a una API meteorológica externa 
  
  3 | [Batch Schedulable & LWC](force-app/main/default/lwc/oppInfoForm) | Formulario de acción en Oportunidades para la modificación del nombre y la amount de la oportunidad + batch programado con envío de email diario 
+ 4 | [Product Cart] | Carrito de compra configurado a través de la selección de productos del catálogo. LWC conectados a través de LMS.
 
 **Nota:** algunas clases, como los handlers y triggers de Cuenta y Oportunidad, se reutilizan entre proyectos. He intentado utilizar el mismo enfoque de organización de código que se usaría en un entorno de trabajo real.
