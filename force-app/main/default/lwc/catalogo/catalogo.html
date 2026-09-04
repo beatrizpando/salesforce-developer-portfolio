@@ -1,0 +1,32 @@
+<!-- catalogo/catalogo.html -->
+<template>
+    <lightning-card title="Catálogo de Productos" icon-name="standard:product">
+
+        <template if:true={error}>
+            <div class="slds-p-around_small slds-text-color_error">
+                {error}
+            </div>
+        </template>
+
+        <template if:true={productos.length}>
+            <template for:each={productos} for:item="producto">
+                <div key={producto.id} class="slds-p-around_small slds-border_bottom">
+                    <p class="slds-text-heading_small">{producto.nombre}</p>
+                    <p>{producto.precioFormateado} €</p>
+                    <lightning-button
+                        label="Añadir al carrito"
+                        variant="brand"
+                        data-id={producto.id}
+                        onclick={handleAgregar}>
+                    </lightning-button>
+                </div>
+            </template>
+        </template>
+
+        <template if:false={productos.length}>
+            <template if:false={error}>
+                <lightning-spinner alternative-text="Cargando productos..." size="small"></lightning-spinner>
+            </template>
+        </template>
+    </lightning-card>
+</template>

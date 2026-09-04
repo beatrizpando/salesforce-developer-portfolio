@@ -1,0 +1,27 @@
+<!-- carrito/carrito.html -->
+<template>
+    <lightning-card title="Mi Carrito" icon-name="standard:cart">
+        <span slot="actions">{cantidadItems} items</span>
+
+        <template if:true={items.length}>
+            <template for:each={items} for:item="item">
+                <div key={item.id} class="slds-p-around_small slds-border_bottom slds-grid slds-grid_align-spread">
+                    <span>{item.nombre} x{item.cantidad}</span>
+                    <span>{item.subtotalFormateado} €</span>
+                    <lightning-button-icon
+                        icon-name="utility:delete"
+                        data-id={item.id}
+                        onclick={handleEliminar}>
+                    </lightning-button-icon>
+                </div>
+            </template>
+            <div class="slds-p-around_small slds-text-align_right slds-text-heading_small">
+                Total: {totalFormateado} €
+            </div>
+        </template>
+
+        <template if:false={items.length}>
+            <p class="slds-p-around_small">El carrito está vacío</p>
+        </template>
+    </lightning-card>
+</template>

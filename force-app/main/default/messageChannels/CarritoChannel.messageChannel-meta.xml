@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>CarritoChannel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Canal para comunicar el catálogo con el carrito de compra</description>
+    <lightningMessageFields>
+        <fieldName>action</fieldName>
+        <description>Tipo de acción: ADD_ITEM, REMOVE_ITEM, CLEAR_CART</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>payload</fieldName>
+        <description>Datos del producto o del item a modificar</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
